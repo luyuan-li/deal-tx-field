@@ -257,21 +257,21 @@ func HandlerOneBlock(height, startHeight, endHeight int64) error {
 					return nil, err
 				}
 
-				/*				queryProgress := bson.M{
-									"start_height": startHeight,
-									"end_height":   endHeight,
-								}
+				queryProgress := bson.M{
+					"start_height": startHeight,
+					"end_height":   endHeight,
+				}
 
-								updateProgress := bson.M{
-									operator.Set: bson.M{
-										"current_height": block.Block.Height,
-									},
-								}
+				updateProgress := bson.M{
+					operator.Set: bson.M{
+						"current_height": block.Block.Height,
+					},
+				}
 
-								if err = database.Collection(entity.DealFieldProgress{}.CollectionName()).UpdateOne(sessCtx, queryProgress, updateProgress); err != nil {
-									logrus.Errorf("HandlerOneBlock DealFieldProgress UpdateOne is err, height:%d,tx_hash:%s,err:%v", block.Block.Height, txHash, err)
-									return nil, err
-								}*/
+				if err = database.Collection(entity.DealFieldProgress{}.CollectionName()).UpdateOne(sessCtx, queryProgress, updateProgress); err != nil {
+					logrus.Errorf("HandlerOneBlock DealFieldProgress UpdateOne is err, height:%d,tx_hash:%s,err:%v", block.Block.Height, txHash, err)
+					return nil, err
+				}
 
 			}
 
