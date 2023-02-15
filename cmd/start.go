@@ -8,7 +8,7 @@ import (
 )
 
 const (
-	defaultLocalConfig = "/home/lly/GolandProjects/github.com/bianjieai/deal-tx-field/configs/config.toml"
+	defaultLocalConfig = "/opt/config.toml"
 )
 
 var (
