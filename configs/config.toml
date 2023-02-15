@@ -1,0 +1,14 @@
+[database]
+url= "mongodb://wcchain:wcchainPassword@192.168.0.135:27017/?connect=direct&authSource=iobscan_wcchain"
+database= "iobscan_wcchain"
+
+[server]
+node_urls="http://192.168.0.160:26657"
+thread_num=10
+start_height=0
+end_height=900000
+incr_height=1000
+max_connection_num=100
+init_connection_num=5
+bech32_acc_prefix="iaa"
+only_support_module=""
